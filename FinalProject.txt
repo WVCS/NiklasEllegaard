@@ -1,0 +1,85 @@
+background();
+
+//draws all elements of the background (Niklas)
+function background(){
+
+penColor("lightblue");
+dot(1230123123);
+penUp();
+moveTo(25,60);
+clouds();
+moveTo(230,40);
+clouds();
+moveTo(160,200);
+penDown();
+sun(130);
+penUp();
+moveTo(0,200);
+penDown();
+for (var i = 0; i < 80; i++) {
+  runner(222,184,135);
+}
+}
+
+//runner draws a line across (Niklas)
+function runner(r,g,b) {
+  penRGB(r,g,b);
+  penWidth(10);
+  turnTo(90);
+  moveForward(350);
+  turnRight(90);
+  moveForward(5);
+  turnRight(90);
+  moveForward(350);
+}
+
+//draws sun (Niklas)
+function sun(size){
+  penColor("yellow");
+  dot(size);
+  for (var i = 0; i < 24; i++) {
+    rays(180);
+  }
+  
+}
+
+//draws sun rays (Niklas)
+function rays(size){
+penWidth(10);
+turnLeft(15);
+moveForward(size);
+turnLeft(180);
+moveForward(size);
+}
+
+//draws clouds (Niklas)
+function clouds(){
+  for (var i = 0; i < 4; i++) {
+  penColor("white");
+  dot(randomNumber(20,50));
+  turnTo(90);
+  moveForward(35);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
